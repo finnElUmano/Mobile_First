@@ -248,3 +248,30 @@ main {
     font-weight: 300;
     color: var(--warm-black);
 }
+/* segunda tabla */
+.main-currency-table .currency-table2--title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secundary-blue);
+}
+
+.currency-table2--date {
+    width: 220px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    background-color :#94E8E3;
+    border-radius: 8px;
+}
+
+.currency-table2--date > p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    color: var(--warm-black); 
+}
+
