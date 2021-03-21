@@ -290,6 +290,8 @@ main {
     top: -10px;
     left: calc(50% - 20px);
     background-image: url('./assets/icons/batata.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .product-detail--title {
