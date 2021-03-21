@@ -96,7 +96,7 @@ header img {
     width: 13px;
     height: 8px;
     margin-left: 10px;
-    background-image: url('./assets/icons/down-arrow.svg');
+    background-image: url('../assets/icons/down-arrow.svg');
 }
 
 main {
@@ -125,7 +125,7 @@ main {
     height: 200px;
     margin: 0 auto;
     margin-bottom: 50px;
-    background-image: url('./assets/img/Bitcoin.svg');
+    background-image: url('../assets/img/Bitcoin.svg');
     background-repeat: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,9 +139,9 @@ main {
     color: var(--black);
 }
 
-.main-exchange-container p {
+.main-exchange-container P {
     margin-bottom: 30px;
-    font-size: 1.4 rem;
+    font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.6rem;
     color: #757575;
@@ -230,7 +230,7 @@ main {
     width: 15px;
     height: 15px;
     margin-left: 10px;
-    background-image: url('./assets/icons/trending-down.svg');
+    background-image: url('../assets/icons/trending-down.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;  
@@ -241,7 +241,7 @@ main {
     width: 15px;
     height: 15px;
     margin-left: 10px;
-    background-image: url('./assets/icons/trending-up.svg');
+    background-image: url('../assets/icons/trending-up.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -285,11 +285,11 @@ main {
 }
 .product-detail--batata-logo {
     position: absolute; /* ojo con esto el contenedor padre tiene que tner relative*/
-    width: 4.57px;
+    width: 40px;
     height: 24.01px;
     top: -10px;
     left: calc(50% - 20px);
-    background-image: url('./assets/icons/batata.svg');
+    background-image: url('../assets/icons/batata.svg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -318,7 +318,11 @@ main {
     color: #808080;
 }
 /* tarjetas de beneficios*/
-.product-detail--card {
+.product-detail--card1,
+.product-detail--card2,
+.product-detail--card3,
+.product-detail--card4 {
+    text-align: left;
     width: 90%;
     min-width: 288px;
     max-width: 400px;
@@ -330,19 +334,56 @@ main {
     box-shadow: 0 4px 8px rgb(0, 0, 0, 0.16);
 }
 
-.product-detail--card .clock {
+.product-detail--card1 .clock {
     display: inline-block;
     width: 20px;
     height: 20px;
     margin: 0 auto;
     margin-bottom: 10px;
-    background-image: url('./assets/icons/clock.svg');
+    background-image: url('../assets/icons/clock.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+.eye {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url('../assets/icons/eye.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.product-detail--card .product--card--title {   
+.money {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url('../assets/icons/dollar-sign.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url('../assets/icons/check-circle.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.product-detail--card1 .product--card-title,
+.product-detail--card2 .product--card-title,
+.product-detail--card3 .product--card-title,
+.product-detail--card4 .product--card-title {
     margin-bottom: 15px;
     font-size: 1.8rem;
     font-weight: bold;
@@ -350,7 +391,10 @@ main {
     color: var(--just-white); 
 }
 
-.pruduct--card-body {
+.product-detail--card1 .pruduct--card-body,
+.product-detail--card2 .pruduct--card-body,
+.product-detail--card3 .pruduct--card-body,
+.product-detail--card4 .pruduct--card-body {
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.8rem;
