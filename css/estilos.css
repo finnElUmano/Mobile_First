@@ -456,20 +456,59 @@ main {
     line-height: 1.8rem;
     color: #757575;
 }
-/*1re tarjeta*/
+    /* sliders*/
+    /* las tarjetas tiene que tener reglas para que 
+    podamos tner una animacion el scrol*/
+.plans-container--slider {
+    display: flex;
+    /* gap: 50px;  espaciado entre tarjetas*/
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+/*CONTENEDORES DE TARJETAS*/
 .plans-conteiner--card {
     position: relative;
+    /*para que caundo agamos scroll 
+    nos centre automaticamente */
+    scroll-snap-align: center; 
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 0;
+    margin: 50px 10px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 }
-
+.plans-conteiner--card1 {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 10px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 99, 71, 0.6);
+}
+.plans-conteiner--card2 {
+    position: relative;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 10px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(254, 204, 67, 0.5);
+}
+    /* encabesados */
 .plans-conteiner--card .recommended {
     position: absolute;
     width: 120px;
@@ -478,11 +517,35 @@ main {
     top: -15px;
     font-size: 1.2rem;
     left: calc(50% - 60px);
-    background-color: var(--bitcoin-orange);
+    background-color: #d9ffb3;
+    border-radius: 8px;
+    color: var(--black);
+}
+.plans-conteiner--card1 .recommended {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    top: -15px;
+    font-size: 1.2rem;
+    left: calc(50% - 60px);
+    background-color: #ffb366;
     border-radius: 8px;
     color: var(--just-white);
 }
-
+.plans-conteiner--card2 .recommended {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    top: -15px;
+    font-size: 1.2rem;
+    left: calc(50% - 60px);
+    background-color: #ffcc00;
+    border-radius: 8px;
+    color: var(--just-white);
+}
+    /* titulos */
  .plans-conteiner--card .plan-card--title {
     padding-top: 30px;
     font-size: 1.4rem;
@@ -490,8 +553,24 @@ main {
     line-height: 1.8rem;
     color: black;
 }
-
-.plans-conteiner--card  .plan-card--price {
+.plans-conteiner--card1 .plan-card1--title {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+.plans-conteiner--card2 .plan-card2--title {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+    /* precios */
+.plans-conteiner--card  .plan-card--price,
+.plans-conteiner--card1  .plan-card1--price,
+.plans-conteiner--card2  .plan-card2--price {
     padding: 5px 0;
     margin: 0;
     font-size: 5.2rem;
@@ -500,33 +579,65 @@ main {
     color: black;
 }
 
-.plan-card--price span {
+.plan-card--price span,
+.plan-card1--price span,
+.plan-card2--price span {
     position: absolute;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 300;
     margin: -15px 15px 20px -15px;
 }
 
-.plan-card--saving {
+.plan-card--saving,
+.plan-card1--saving,
+.plan-card2--saving {
     font-size: 1.2rem;
     color: #757575;
 }
-
+    /*boton de escojer*/
 .plan-card--ca {
     width: 150px;
     height: 48px;
     margin-top: 5px;
+    margin-bottom: 15px;
     background:var(--off-white);
     border: 2px solid var(--bitcoin-orange);
     border-radius: 4px;
-    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+.plan-card1--ca {
+    width: 150px;
+    height: 48px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background:var(--off-white);
+    border: 2px solid  #ffb366;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+.plan-card2--ca {
+    width: 150px;
+    height: 48px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background:var(--off-white);
+    border: 2px solid #ffcc00;
+    border-radius: 4px;
     font-size: 1.4rem;
     font-weight: bold;
     line-height: 1.8rem;
     color: var(--black);
 }
 
-.plan-card--ca span {
+.plan-card--ca span,
+.plan-card1--ca span,
+.plan-card2--ca span  {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -534,4 +645,30 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     vertical-align: text-bottom;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.left li {
+    margin: 10px 0;
+}
+.left a {
+    text-decoration: none;
+    color: var(--just-white);
 }
